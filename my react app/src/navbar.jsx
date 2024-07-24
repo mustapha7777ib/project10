@@ -24,7 +24,22 @@ function Navbar() {
             <div className='ind'>
                 <p className='headings contact'>Contact</p><hr className='hoverss'/>
             </div>
-            <img id='cart' src={logo} alt="Cart Icon" />
+            <div>
+                <img id='cart' src={logo} alt="Cart Icon" />
+                <div>
+                    <p>Cart</p><hr/>
+                    <div>
+                        <img src=''/>
+                        <div>
+                            <p>Fall Limited Edition Sneakers</p>
+                            {/* <div>
+                                <p>$125 x {click} {125 * click}</p>
+                            </div> */}
+                        </div>
+
+                    </div>
+                </div>
+            </div>
             <img id='avatar' src={logo1} alt="Avatar Icon" />
         </div>
         <div className='random'>

@@ -1,8 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
 body {
-  padding-left: 200px;
-  padding-right: 200px;
+  padding-left: 180px;
+  padding-right: 130px;
   font-family: "Kumbh Sans", sans-serif;
   font-optical-sizing: auto;
+}
+.flex{
+  display: flex;
+  flex-direction: row;
 }
 .flex1{
   display: flex;
@@ -30,7 +35,7 @@ body {
   transition: filter 0.4s ease;
 }
 #avatar {
-  border: 3px solid transparent; /* Invisible border by default */
+  border: 3px solid transparent; 
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -40,7 +45,8 @@ body {
 }
 
 #avatar:hover {
-  border-color: orange; /* Change border color on hover */
+  border-color: orange; 
+  cursor: pointer;
 }
 
 .headings{
@@ -54,6 +60,8 @@ body {
 hr{
   opacity: 40%;
   margin-top: 8px;
+  width: 1025px;
+  margin-left: 0px;
 }
 .headings:hover{
   color:hsl(220, 13%, 13%);
@@ -63,7 +71,7 @@ hr{
 }
 .hoverss{
   border-top: 3px solid hsl(26, 100%, 55%);
-  opacity: 0%;
+  opacity: 03%;
   width: 100%;
   margin-top: 0px;
 }
@@ -83,10 +91,8 @@ hr{
   margin-top: -17px;
 }
 .contact{
-  margin-right: 230px;
+  margin-right: 280px;
 }
-
-
 
 
 
@@ -95,25 +101,22 @@ hr{
 
 
 .products{
-  height: 400px;
-  width: 400px;
-  margin-left: 65px;
-  margin-top: 60px;
-}
-.shoe{
     height: 400px;
     width: 400px;
-
-    border-radius: 10px;
+    margin-left: 30px;
+    margin-top: 60px;
+    margin-right: 140px;
 } 
+.shoe{
+  height: 400px;
+  width: 400px;
+  border-radius: 10px;
+}
 .shoes{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 20px;
-}
-.shoe1{
-
 }
 .shoes *{
 
@@ -121,8 +124,133 @@ hr{
   width: 75px;
   border-radius: 10px;
 }
+
 .shoes *:hover{
   opacity: 30%;
   transition: 0.2s;
   cursor: pointer;
+}
+.shoess.clicked{
+  opacity: 30%;
+  border: 2px solid hsl(26, 100%, 55%);
+}
+
+
+
+
+.info{
+  padding-top: 100px;
+  margin-right: 120px;
+}
+.companyname{
+  opacity: 40%;
+  font-size: 11.5px;
+  font-weight: 700;
+  margin-bottom: -15px;
+}
+h1{
+  font-size: 40px
+}
+.body{
+  opacity: 50%;
+}
+.cutprice{
+  font-size: 28px;
+  font-weight: 550;
+}
+.price{
+  display: flex;
+  flex-direction: row;
+  margin-top: -25px;
+  margin-bottom: -35px;
+}
+.price *{
+  margin-right: 10px;
+}
+.discount{
+  background-color: black;
+  color: white;
+  border-radius: 3px;
+  width: 50px;
+  text-align: center;
+  vertical-align: middle;
+  height: 20px;
+  margin-top: 35px;
+}
+.newprice{
+  opacity: 40%;
+  font-size: 15px;
+
+}
+.amount{
+  display: flex;
+  flex-direction: row;
+  background-color: hsl(223, 64%, 98%);
+  width: 150px;
+  border-radius: 3px;
+  margin-right: 20px;
+  height: 45px;
+}
+.amount *{
+  margin-right: 50px;
+}
+.selection{
+  display: flex;
+  flex-direction: row;
+
+}
+.minus{
+  color: hsl(26, 100%, 55%);
+  font-size: 30px;
+  padding-left: 10px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+
+  
+}
+.minus:hover{
+  transition: background-color 1s ease;
+  cursor: pointer;
+  opacity: 50%;
+}
+.plus{
+  color: hsl(26, 100%, 55%);
+  font-size: 30px;
+  margin-left: -5px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.plus:hover{
+  transition: background-color 1s ease;
+  cursor: pointer;
+  opacity: 50%;
+}
+.number{
+  margin-top: 13px;
+  margin-left: -5px;
+}
+.cartcontainer{
+  background-color:hsl(26, 100%, 55%) ;
+  border: none;
+  border-radius: 5px;
+  width: 200px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+}
+.cartcontainer:hover{
+  background-color: hsl(26, 70%, 45%);
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+.cart{
+  height: 17px;
+  width: 17px;
+  padding-top: 0px;
+  padding-right: 10px;
+}
+.text{
+  font-weight: 600;
 }
