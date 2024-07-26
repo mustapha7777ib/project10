@@ -4,11 +4,13 @@ import logo3 from "./images/image-product-3-thumbnail.jpg";
 import logo4 from "./images/image-product-4-thumbnail.jpg";
 import logo5 from "./images/cart.svg";
 import React, { useState } from 'react';
+import Navbar from "./navbar";
 
 function Showroom() {
   const [imageSrc, setImageSrc] = useState(logo1);
   const [clickedImage, setClickedImage] = useState(null);
   const [click, setclick]= useState(0);
+  console.log(click);
 
   const clickHandler1 = () => {
     setclick(click+1);
@@ -16,12 +18,11 @@ function Showroom() {
   }
   const clickHandler2 = () => {
     if (click > 0) {
-
       setclick(click-1);
       console.log(`Clicked ${click} times.`);
     }
     else{
-      setclick(click-1);
+      setclick(click);
       console.log(`Clicked ${click} times.`);
     }
   }
@@ -34,6 +35,7 @@ function Showroom() {
   const point = <img className="cart" src={logo5}/>
   return (
     <>
+    <Navbar click = {click} imageSrc={imageSrc}/>
     <div className="flex">
       <div className="products">
         <div>
@@ -83,8 +85,8 @@ function Showroom() {
             <p className="plus" onClick={() => clickHandler1()}>+</p>
           </div>
           <button className="cartcontainer"> 
-          <p>{point}</p>
-          <p className="text">Add to cart</p>
+            <p>{point}</p>
+            <p className="text">Add to cart</p>
           </button>
         </div>
       </div>
