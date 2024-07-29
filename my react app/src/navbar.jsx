@@ -5,18 +5,29 @@ import { useState } from 'react';
 
 
 function Navbar(props) {
-    const [classs,setclass] = useState('cartbody1')
+    const [classs,setclass] = useState('cartbody11')
+    const [classs2,setclass2] = useState('cartbody112')
     var a = props.click;
+    var c = typeof a;
     var b = props.imageSrc;
-        const handleclick = () => {
-            if (classs == 'cartbody1' ){
-                setclass('cartbody11')
-            }
-            else{
-                setclass('cartbody1')
-            }
-            ;
+    const handleclick = () => {
+        if (a == 0){
+            console.log(c);
+            setclass2('cartbody111')
         }
+        else if (a != 0 && classs == 'cartbody1' ){
+            setclass('cartbody11')
+            setclass2('cartbody112')
+        }
+        else if (a != 0 && classs == 'cartbody11' ){
+            setclass('cartbody1')
+            setclass2('cartbody112')
+        }
+        else{
+            setclass('cartbody1')
+            setclass2('cartbody112')
+        }
+    }
     return (
         <>
         <div className="flex1">
@@ -45,15 +56,19 @@ function Navbar(props) {
                         <div className='cartbody3'>
                             <p className='text1'>Fall Limited Edition Sneakers</p>
                             <div>
-                                <p>$125 x {a} ${125 * a}</p>
+                                <p>$125 x {a} <span className='okk'>${125 * a}</span></p>
                             </div>
                             <button className= 'buttonn'>
                                 <p className='buttonn1'>Checkout</p>
                             </button>
                         </div>
-
                     </div>
                 </div>
+                <div className={classs2}>
+                    <p>Cart</p>< hr className='line'/>
+                    <p className='empty'>Your cart is empty</p> 
+                </div>
+
             </div>
             <img id='avatar' src={logo1} alt="Avatar Icon" />
         </div>
